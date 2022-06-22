@@ -44,9 +44,13 @@
   // },
   // 插件：C:\Users\{UserName}\AppData\Roaming\Typora\picgo\win64\picgo install xx
   "picgoPlugins": {
+    // 文件重命名插件
     "picgo-plugin-rename-file": true,
+    // GitHub增强插件
     "picgo-plugin-github-plus": true,
+    // 配置文件目录插件
     "picgo-plugin-super-prefix": true
+    // 水印插件：picgo-plugin-watermark
   },
   // 插件配置
   "picgo-plugin-super-prefix": {
@@ -69,4 +73,5 @@
 ![image-20220623013726639](https://cdn.jsdelivr.net/gh/littlecharacter/picgo/img/20220623/20220623013728.png)
 
 <font color="red">注：</font>Jsdelivr的url，可以不加仓库的分支``https://cdn.jsdelivr.net/gh/user/repo/xx/file`` 
+
 
