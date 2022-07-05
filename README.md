@@ -1,4 +1,4 @@
-# Typora+PicGo-Core+GitHub+Jsdelivr实现高效图文写作
+# Typora+PicGo-Core+Git+Jsdelivr实现高效图文写作
 
 ## 01、Typora
 
@@ -6,30 +6,42 @@
 
 配置：文件》偏好设置》图像
 
-![image-20220623011110090](https://cdn.jsdelivr.net/gh/littlecharacter/picgo/img/20220623/20220623011111.png)
+![image-20220705215955](https://gitee.com/littlecharacter/picgo/raw/master/img/20220705215955.png)
 
 其中，
-
-②会下载到：``C:\Users\{UserName}\AppData\Roaming\Typora\picgo\win64``
-
-③配置如下：``C:\Users\{UserName}\.picgo\config.json``
+1. 会下载到：``C:\Users\{UserName}\AppData\Roaming\Typora\picgo\win64``
+2. 配置如下：``C:\Users\{UserName}\.picgo\config.json``
 
 ```json
 {
-  // GitHub配置
+  // Gitee配置
   "picBed": {
-    "uploader": "github",
-    "current": "github",
-    "github": {
+    "uploader": "gitee",
+    "current": "gitee",
+    "gitee": {
       "repo": "littlecharacter/picgo",
-      "branch": "main",
-      "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "branch": "master",
+      "token": "e65cab40a673cc5ba2ff0c57558c980c",
       "path": "img/",
-      // Jsdelivr配置
-      "customUrl": "https://cdn.jsdelivr.net/gh/littlecharacter/picgo"
+      "customPath": "default",
+      "customUrl": ""
     },
     "transformer": "path"
   },
+  // GitHub配置
+  // "picBed": {
+  //   "uploader": "github",
+  //   "current": "github",
+  //   "github": {
+  //     "repo": "littlecharacter/picgo",
+  //     "branch": "main",
+  //     "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  //     "path": "img/",
+  //     // Jsdelivr配置
+  //     "customUrl": "https://cdn.jsdelivr.net/gh/littlecharacter/picgo"
+  //   },
+  //   "transformer": "path"
+  // },
   // "settings": {
   //   "server": {
   //     "enable": true,
@@ -49,7 +61,9 @@
     // GitHub增强插件
     "picgo-plugin-github-plus": true,
     // 配置文件目录插件
-    "picgo-plugin-super-prefix": true
+    "picgo-plugin-super-prefix": true,
+    // Gitee上传插件
+    "picgo-plugin-gitee-uploader": true
     // 水印插件：picgo-plugin-watermark
   },
   // 插件配置
@@ -63,15 +77,17 @@
 }
 ```
 
-## 02、GitHub
+## 02、Gitee OR GitHub
 
-1. 注意github仓库的分支
-2. 生成token时，需要勾上``repo``
+1. 注意git仓库的分支
+2. github生成token时，需要勾上``repo``，Gitee默认即可
 
 ## 03、[Jsdelivr](https://www.jsdelivr.com/?docs=gh)  
 
 ![image-20220623013726639](https://cdn.jsdelivr.net/gh/littlecharacter/picgo/img/20220623/20220623013728.png)
 
 <font color="red">注：</font>Jsdelivr的url，可以不加仓库的分支``https://cdn.jsdelivr.net/gh/user/repo/xx/file`` 
+
+> cdn加速，如果使用github等国外git需要cdn加速，不过加速可能随时不靠谱
 
 
